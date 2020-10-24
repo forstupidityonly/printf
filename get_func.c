@@ -8,6 +8,8 @@ int (*get_func(char specifier))(va_list)
 	function_select opt[] = {
 		{'c', select_c},
 		{'s', select_s},
+		{'i', select_i},
+		{'d', select_i},
 		{'\0', NULL}
 	};
 
