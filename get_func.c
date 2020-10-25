@@ -10,6 +10,7 @@ int (*get_func(char specifier))(va_list)
 		{'s', select_s},
 		{'i', select_i},
 		{'d', select_i},
+		{'b', select_b},
 		{'\0', NULL}
 	};
 
