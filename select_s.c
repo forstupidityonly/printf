@@ -9,11 +9,7 @@ int select_s(va_list args)
 	int itr = 0;
 	char *string = va_arg(args, char *);
 
-<<<<<<< HEAD
-	if (!string)
-=======
 	if (string == NULL)
->>>>>>> Corbin
 		string = "(null)";
 	while (string[itr])
 	{
