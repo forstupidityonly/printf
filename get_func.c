@@ -1,6 +1,8 @@
 #include "holberton.h"
 /**
-  *
+  * get_func - selects correct function for format spec
+  * @specifier: the format char
+  * Return: function ptr to correct function
   */
 int (*get_func(char specifier))(va_list)
 {
@@ -14,9 +16,9 @@ int (*get_func(char specifier))(va_list)
 		{'\0', NULL}
 	};
 
-	while(opt[itr].specifier)
+	while (opt[itr].specifier)
 	{
-		if(opt[itr].specifier == specifier)
+		if (opt[itr].specifier == specifier)
 			return (opt[itr].function);
 		itr++;
 	}

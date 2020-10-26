@@ -7,14 +7,16 @@
 int select_s(va_list args)
 {
 	int i, itr = 0;
-	char *str;
-	
-	str = va_arg(ar_list, char *);
-	if (str == NULL)
-		str = "(null)";
+	char *str = va_args(args, char *);
 
-	for (i = 0; str[i]; i++)
-		itr += _putchar(str[i]);
+	if (string == NULL)
+		string = "(null)";
+
+	while (string[itr])
+	{
+		_putchar(string[itr]);
+		itr++;
+	}
 
 	return (itr);
 }

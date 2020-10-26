@@ -1,6 +1,18 @@
 #include "holberton.h"
 /**
+  * _printf - small printf function
+  * @format: is a character string. The format string is
+  * composed of zero or more directives.
+  * Return: count
   *
+  * print until % is found if %% put %
+  * found char after % check if its null bit
+  * its not so found format specifier after %
+  * find correct formatting function
+  * call function to print and track count
+  * function should be a function ptr
+  * get_func - takes in format specifier and returns ptr to correct func
+  * and return count of printed values
   */
 int _printf(const char *format, ...)
 {
@@ -11,38 +23,20 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	while (*format)
 	{
-		/**
-		  * print until % is found
-		  */
 		if (*format != '%')
 		{
 			_putchar(*format);
 			count++;
 		}
-		/**
-		  * if %% then print %
-		  */
 		else if (*format == '%' && *(format + 1) == '%')
 		{
 			format++;
 			_putchar('%');
 			count++;
 		}
-		/**
-		  * found char after % check if its null bite
-		  * its not so found format specifier after %
-		  * find correct formatting function
-		  * call function to print and track count
-		  */
 		else if (*format == '%' && *(format + 1) != '%')
 		{
 			format++;
-			/**
-			  * function should be a function ptr
-			  * get_func - takes in format specifier and returns ptr to correct func
-			  * functions should take va_list(args) 
-			  * and return count of printed values
-			  */
 			function = get_func(*format);
 			if (*(format) == '\0')
 				return (-1);
