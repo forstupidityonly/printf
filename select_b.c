@@ -9,7 +9,7 @@ int bhelper(unsigned int i)
 	int count = 0;
 
 	if (i == 0)
-		return(0);
+		return (0);
 	count += bhelper(i / 2);
 	if (i % 2 == 0)
 	{
@@ -24,9 +24,9 @@ int bhelper(unsigned int i)
 	return (count);
 }
 /**
-  * https://www.electronics-tutorials.ws/binary/bin_2.html
-  * https://www.youtube.com/watch?v=rsxT4FfRBaM
-  * select_b - print int in bianary
+  * select_b - int to make bi
+  * electronics-tutorials.ws/binary/bin_2.html
+  * youtube.com/watch?v=rsxT4FfRBaM
   * @args: args
   * Return: count
   */
