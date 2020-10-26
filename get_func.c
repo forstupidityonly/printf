@@ -6,7 +6,6 @@
   */
 int (*get_func(char specifier))(va_list)
 {
-	char *test = malloc(100);
 	int itr = 0;
 	function_select opt[] = {
 		{'c', select_c},
@@ -17,14 +16,11 @@ int (*get_func(char specifier))(va_list)
 		{'\0', NULL}
 	};
 
-	if (!test)
-		exit(98);
 	while (opt[itr].specifier)
 	{
 		if (opt[itr].specifier == specifier)
 			return (opt[itr].function);
 		itr++;
 	}
-	free(test);
 	return (NULL);
 }
