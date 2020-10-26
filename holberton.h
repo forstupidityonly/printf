@@ -4,7 +4,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 /**
-  * select - struct to find functions
+  * struct select - struct to find functions
   * @specifier: the format specifier
   * @function: function ptr
   * Description: ptr
