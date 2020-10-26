@@ -20,8 +20,8 @@ int main(void)
 	printf("Negative:[%d]\n", -762534);
 	_printf("Character:[%c]\n", 'H');
 	printf("Character:[%c]\n", 'H');
-	_printf("String:[%s]\n", "I am a string !");
-	printf("String:[%s]\n", "I am a string !");
+	_printf("String:[%s]\n", '\0');
+	printf("String:[%s]\n", '\0');
 	_printf("%b\n", 98);
 	return (0);
 }
