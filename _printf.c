@@ -37,6 +37,8 @@ int _printf(const char *format, ...)
 		else if (*format == '%' && *(format + 1) != '%')
 		{
 			format++;
+			while (*format == ' ')
+				format++;
 			function = get_func(*format);
 			if (*(format) == '\0')
 				return (-1);

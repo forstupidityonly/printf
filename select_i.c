@@ -8,7 +8,13 @@
 int ihelper(int i)
 {
 	int count = 0;
+	int binary = 0;
 
+	if (i == -2147483648)
+	{
+		binary = 1;
+		i = i / 10;
+	}
 	if (i < 0)
 	{
 		_putchar('-');
@@ -18,6 +24,8 @@ int ihelper(int i)
 		count = count + ihelper(i / 10);
 	_putchar((i % 10) + '0');
 	count++;
+	if (binary == 1)
+		_putchar('8');
 	return (count);
 }
 /**
