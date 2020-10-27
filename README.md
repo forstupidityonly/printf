@@ -5,7 +5,7 @@ _printf is a project that recreates the functionality of printf for specific fla
 Programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
 ```
 
-##Authorized Functions & Macros:
+## Authorized Functions & Macros:
 ```
 write (man 2 write)
 malloc (man 3 malloc)
@@ -124,4 +124,5 @@ Unknown:[%z]
 
 
 
-## Authors
+## Authors:
+[@Corbin Vandeventer - Github](https://github.com/forstupidityonly) - [@Lonzo Rust - Github](https://github.com/lonzor)
