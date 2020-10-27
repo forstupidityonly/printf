@@ -1,21 +1,66 @@
-./" This is _printf manpage
-.TH man 3 "17 May 2020" "1.0" "_printf man page"
+.TH _PRINTF 3 "27 October 2020" "Holberton Printf Group Project"
 .SH NAME
-.B _printf
-- format and data.
+_printf - Print formatted datat that is determined output specifiers.
 .SH SYNOPSIS
-_printf FORMAT [ARGUMENT]...
+.B _printf (
+.I char *FORMAT
+,
+.I [ARGUMENT]...
+)
 .SH DESCRIPTION
-Print ARGUMENT(s) according to FORMAT:
-
-\\"     double quote.
-
-\\\\     backslash.
-
-\\n     new line.
-
-\\r     carriage return.
-
-\\t     horizontal tab.
-
-%%     a single %.
+Print the FORMAT in the string output, after reading specifiers with '%'
+.IReturn:
+Print the numbers of characters up to  Null-Byte
+Print the ARGUMENT(s) according to FORMAT:
+.PP
+.B %c
+	Print the characters calling the function and return character ASCII
+.PP
+.B %s
+	Print an array of characters (a string).
+.PP
+.B %d
+	Take the argument, then convert string to handle and print the decimal number of the character ASCII
+.PP
+.B %i
+	Take the argument, then convert string to handle and print the integer number of the character ASCII
+.PP
+.B %b
+	Take the argument, then convert unsigned int to handle and print binary.
+.SH EXAMPLES OF USE
+.B Characters
+.PP
+_printf("Character with _print:[%c][%c][%c][%c]\n", 'H', 'o', 'l', 'b');
+.PP
+.I Output:
+Holb
+.PP
+.B Strings
+.PP
+_printf("String:[%s]\n", "Hello, Holberton!");
+.PP
+.I Output:
+Hello, Holberton
+.PP
+.B Decimal and Integers
+.PP
+_printf("Actual: %i\n", INT_MIN);
+_printf("Actual: %i\n", INT_MAX);
+.PP
+.I Output:
+-2147483648
++2147483647
+.PP
+.B Unsigned Int (Binary)
+.PP
+_printf("%b\n", 98);
+.PP
+.I Output:
+1100010
+.SH SEE ALSO
+.I printf(1) _printf(2) printf(3)
+.SH REPORTING BUGS
+No known bugs.
+.PP
+.SH AUTHOR
+Written by Lonzo Rust and Corbin Vandeventer
