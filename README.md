@@ -126,8 +126,7 @@ Unknown:[%z]
 select_b.c - Handles unsigned int (binary)
 
 
-...
-
+```
 
 int bhelper(unsigned int i)
 {
@@ -157,7 +156,7 @@ int select_b(va_list args)
 	return (count);
 }
 
-...
+```
 
 
 ## Authors:
