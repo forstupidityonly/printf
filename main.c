@@ -40,12 +40,16 @@ int main(void)
     len2 = printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
-    _printf("Unknown:[%r]\n");
+    _printf("Unknown:[%q]\n");
     _printf("%c%cth %s%s a%cg%s: Y%sou %s no%ching%s Snow.%c", 'W', 'i', "some ", "more", 'r', "s", "", "know", 't', ", Jon", '\n');
     printf("%c%cth %s%s a%cg%s: Y%sou %s no%ching%s Snow.%c", 'W', 'i', "some ", "more", 'r', "s", "", "know", 't', ", Jon", '\n');
     _printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
     printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
     _printf("css%ccs%scscscs\n", 'T', "Test");
     printf("css%ccs%scscscs\n", 'T', "Test");
+    _printf("rot 13:[%R]\n", "hello holberton");
+    printf("rot 13:[%s]\n", "uryyb ubyoregba");
+    _printf("String rev:[%r]\n", "I am a string !");
+    printf("String rev:[%s]\n", "! gnirts a ma I");
     return (0);
 }
