@@ -121,8 +121,39 @@ Unknown:[%z]
 | %      | Prints a % as printf        |
 
 
+## Functions to Handle Format Specifiers
 
+select_b.c - Handles unsigned int (binary)
+...
+int bhelper(unsigned int i)
+{
+	int count = 0;
 
+	if (i == 0)
+		return (0);
+	count += bhelper(i / 2);
+	if (i % 2 == 0)
+	{
+		_putchar('0');
+		count++;
+	}
+	else
+	{
+		_putchar('1');
+		count++;
+	}
+	return (count);
+}
+
+int select_b(va_list args)
+{
+	int count = 0;
+	unsigned int i = va_arg(args, unsigned int);
+
+	count = bhelper(i);
+	return (count);
+}
+...
 
 ## Authors:
 [@Corbin Vandeventer - Github](https://github.com/forstupidityonly) - [@Lonzo Rust - Github](https://github.com/lonzor)
