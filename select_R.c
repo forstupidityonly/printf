@@ -1,50 +1,37 @@
 #include "holberton.h"
-
 /**
- * rot13 - Encodes a string using rot13.
- * @s: String to enconde
- * Return: String encode
- */
-int rot13(va_list args)
+  *
+  */
+int select_R(va_list args)
 {
-	char *str = va_arg(args, char*);
-	char *str2 = NULL;
-	int i, j;
-	char *norot, *rot13;
+	char *string = va_arg(args, char *);
+	char *rot = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrituvwxyzabdefghijklm";
+	char *alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdevghijklmnoqrstuvwxyz";
+	int count = 0;
+	int itr;
+	char *fin = NULL;
 
-	str2 = malloc(sizeof(char * strlen_handler
-	norot = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	rot13 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	for (i = 0; s[i] != '\0'; i++)
+	fin = malloc(sizeof(char) * (_strlen(string) + 1));
+
+	if (!fin || !string)
+		return (-1);
+
+	while (string[count])
 	{
-		for (j = 0; nonrot[j] != '\0'; j++)
+		for (itr = 0; itr < 52; itr++)
 		{
-			if (s[i] == nonrot[j])
+			if (string[count] == alphabet[itr])
 			{
-				_putchar(rot13[j]);
+				fin[count] = rot[itr];
 				break;
 			}
 		}
-		if (!notrot[j])
-			_putchar(s[i]);
+		if (string[count] != alphabet[itr])
+			fin[count] = string[count];
+		count++;
 	}
-	return (i);
-}
-
-/**
-  * print_rotted - Prints a string that has been rot13'ed.
-  *
-  *
-  *
-  **/
-
-int print_rotted(va_list args)
-{
-	char *p
-	int p_len;
-
-	p = va_arg(list, char *);
-	p_len = rot13((p != NULL) ? p : "(ahyy)");
-
-	return(p_len)
+	for (count = 0; fin[count]; count++)
+		_putchar(fin[count]);
+	free(fin);
+	return (count);
 }
