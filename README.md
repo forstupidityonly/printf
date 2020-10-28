@@ -3,7 +3,7 @@
 height="300" width="350"/>
 </p>
 
-_printf is a project that recreates the functionality of printf for specific flags and specifiers of the printf function. It prints input to the standard output.
+This is a group project to create our own printf function. _printf is a project that recreates the functionality of printf for specific flags and specifiers of the printf function. It prints input to the standard output.
 
 ## Requirements
 ```
