@@ -1,3 +1,8 @@
+<p align="center">
+<img src="holberton_logo.png"
+height="300" width="350"/>
+</p>
+
 _printf is a project that recreates the functionality of printf for specific flags and specifiers of the printf function. It prints input to the standard output.
 
 ## Requirements
