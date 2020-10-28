@@ -208,5 +208,24 @@ int select_i(va_list args)
 }
 ```
 
+select_s.c - Handles array or characters (strings)
+
+```
+int select_s(va_list args)
+{
+	int itr = 0;
+	char *string = va_arg(args, char *);
+
+	if (string == NULL)
+		string = "(null)";
+	while (string[itr])
+	{
+		_putchar(string[itr]);
+		itr++;
+	}
+	return (itr);
+}
+```
+
 ## Authors:
 [@Corbin Vandeventer - Github](https://github.com/forstupidityonly) - [@Lonzo Rust - Github](https://github.com/lonzor)
