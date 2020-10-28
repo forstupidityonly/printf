@@ -124,7 +124,11 @@ Unknown:[%z]
 ## Functions to Handle Format Specifiers
 
 select_b.c - Handles unsigned int (binary)
+
+
 ...
+
+
 int bhelper(unsigned int i)
 {
 	int count = 0;
@@ -144,7 +148,6 @@ int bhelper(unsigned int i)
 	}
 	return (count);
 }
-
 int select_b(va_list args)
 {
 	int count = 0;
@@ -153,7 +156,9 @@ int select_b(va_list args)
 	count = bhelper(i);
 	return (count);
 }
+
 ...
+
 
 ## Authors:
 [@Corbin Vandeventer - Github](https://github.com/forstupidityonly) - [@Lonzo Rust - Github](https://github.com/lonzor)
